@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#9E1424">
+<title>Guia Atacado de Natal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#9E1424;--wine2:#7A0F1C;--green:#1F5C3A;--green2:#2F6B52;--gold:#E8C46C;--cream:#FFF3D6;--paper:#FFFBF1;--ink:#26332d;--mut:#6b6558;--line:#eadfc4}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--cream);color:var(--ink);font-family:Montserrat,system-ui,sans-serif;font-size:15px;line-height:1.45}
+body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+a{color:var(--green2)}
+header{background:var(--wine);color:#fff;padding:calc(18px + env(safe-area-inset-top)) 18px 22px;border-bottom:6px solid var(--gold);position:relative;overflow:hidden}
+header:after{content:"";position:absolute;right:-40px;top:-40px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,rgba(232,196,108,.35),transparent 70%)}
+.kick{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:700}
+h1{font-family:'Playfair Display',serif;font-size:27px;line-height:1.1;margin:6px 0 4px}
+header p{margin:0;font-size:13px;opacity:.9;max-width:34ch}
+main{padding:16px 16px 8px;max-width:760px;margin:0 auto}
+section{display:none}section.on{display:block;animation:in .25s ease}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+h2{font-family:'Playfair Display',serif;color:var(--wine2);font-size:22px;margin:4px 0 10px}
+h3{font-size:14px;margin:18px 0 6px;color:var(--green)}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+.note{background:#FFF1C9;border-left:4px solid var(--gold);border-radius:8px;padding:10px 12px;font-size:13px;margin:10px 0}
+.note.warn{background:#FCE6E3;border-color:var(--wine)}
+.search{position:sticky;top:0;z-index:5;background:var(--cream);padding:10px 0 8px}
+input,select{width:100%;font:inherit;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;background:#fff;color:var(--ink)}
+input:focus,select:focus{outline:none;border-color:var(--green2);box-shadow:0 0 0 3px rgba(47,107,82,.15)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:8px 0 2px;scrollbar-width:none}
+.chip{flex:none;border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 13px;font:600 12.5px Montserrat;color:var(--ink);cursor:pointer}
+.chip.on{background:var(--green);border-color:var(--green);color:#fff}
+.f h4{margin:0;font-family:'Playfair Display',serif;font-size:18px;color:var(--wine2)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.tag{font-size:11px;font-weight:700;border-radius:999px;padding:3px 9px;background:#E7F1EA;color:var(--green)}
+.tag.r{background:#FCE6E3;color:var(--wine)}.tag.g{background:#FFF1C9;color:#7a5a00}
+.f dl{margin:8px 0 0;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:13px}
+.f dt{color:var(--mut);font-weight:600}.f dd{margin:0}
+.btns{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.b{flex:1 1 auto;min-width:120px;text-align:center;text-decoration:none;border-radius:12px;padding:12px 10px;font:700 13px Montserrat;border:0;cursor:pointer}
+.b.wa{background:var(--green);color:#fff}.b.site{background:#fff;color:var(--green);border:1.5px solid var(--green)}.b.mail{background:#fff;color:var(--wine);border:1.5px solid var(--line)}
+.small{font-size:12px;color:var(--mut)}
+.empty{text-align:center;color:var(--mut);padding:30px 10px}
+label{display:block;font-size:12px;font-weight:700;color:var(--green);margin:12px 0 5px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.res{background:var(--wine);color:#fff;border-radius:16px;padding:16px;margin-top:14px;text-align:center}
+.res b{display:block;font-family:'Playfair Display',serif;font-size:38px;color:var(--gold);line-height:1.1}
+.res small{opacity:.9}
+.kv{display:grid;grid-template-columns:1fr auto;gap:6px 10px;margin-top:12px;font-size:13px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}
+.kv b{text-align:right}
+ul.chk{list-style:none;padding:0;margin:0}
+ul.chk li{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:8px;cursor:pointer}
+ul.chk li .bx{flex:none;width:24px;height:24px;border-radius:8px;border:2px solid var(--green2);display:grid;place-items:center;color:#fff;font-weight:800;font-size:14px}
+ul.chk li.done{background:#EEF6F0}ul.chk li.done .bx{background:var(--green)}ul.chk li.done span{text-decoration:line-through;color:var(--mut)}
+.prog{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin:6px 0 12px}.prog i{display:block;height:100%;background:var(--green);width:0;transition:width .3s}
+.step{display:flex;gap:12px;margin-bottom:10px}.step .n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:800}
+.week{border-left:4px solid var(--gold);padding-left:12px;margin-bottom:14px}.week b{color:var(--wine2)}
+nav{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);display:flex;padding:6px 6px calc(6px + env(safe-area-inset-bottom));z-index:10}
+nav button{flex:1;border:0;background:none;font:700 10.5px Montserrat;color:var(--mut);padding:6px 2px;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer}
+nav button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+nav button.on{color:var(--wine)}
+footer{text-align:center;font-size:11.5px;color:var(--mut);padding:10px 20px 30px}
+@media (prefers-reduced-motion:reduce){section.on{animation:none}.prog i{transition:none}}
+</style></head><body>
+<header><div class="kick">Ponto de Descoberta</div><h1>Guia Atacado de Natal</h1><p>Seus fornecedores, a conta do preço e o plano de novembro e dezembro, num só lugar.</p></header>
+<main>
+
+<section id="t-forn" class="on">
+ <div class="search"><input id="q" type="search" placeholder="Buscar fornecedor, item ou cidade" aria-label="Buscar fornecedor"><div class="chips" id="chips"></div></div>
+ <div class="note">Dados dos sites de cada fornecedor, consultados em 01/11/2026. <b>Não é verificação nem recomendação.</b> Confirme tudo no WhatsApp antes de pagar.</div>
+ <div id="lista"></div>
+ <h3>Mais links para pesquisar</h3>
+ <div class="note warn">Estes ainda <b>não foram conferidos</b> um a um. Veja o que vendem, se atendem CPF e o pedido mínimo.</div>
+ <div id="apoio"></div>
+</section>
+
+<section id="t-calc">
+ <h2>Quanto cobrar</h2>
+ <p class="small" style="margin-top:-4px">Preço de venda = custo por peça ÷ (1 − taxa − margem). Os valores abaixo são só um exemplo: troque pelos seus.</p>
+ <div class="card">
+  <div class="row2"><div><label for="c-compra">Valor da compra (R$)</label><input id="c-compra" type="number" inputmode="decimal" value="180"></div><div><label for="c-qtd">Quantidade de peças</label><input id="c-qtd" type="number" inputmode="numeric" value="100"></div></div>
+  <div class="row2"><div><label for="c-frete">Frete do pedido (R$)</label><input id="c-frete" type="number" inputmode="decimal" value="30"></div><div><label for="c-emb">Embalagem (R$)</label><input id="c-emb" type="number" inputmode="decimal" value="10"></div></div>
+  <div class="row2"><div><label for="c-taxa">Taxa de pagamento (%)</label><input id="c-taxa" type="number" inputmode="decimal" value="5"></div><div><label for="c-marg">Margem desejada (%)</label><input id="c-marg" type="number" inputmode="decimal" value="40"></div></div>
+ </div>
+ <div class="res"><small>Preço de venda por peça</small><b id="r-preco">R$ 0,00</b><small id="r-aviso"></small></div>
+ <div class="kv"><span>Custo real por peça</span><b id="r-custo"></b><span>Entra por peça (sem a taxa)</span><b id="r-liq"></b><span>Lucro por peça</span><b id="r-lucro"></b><span>Peças para recuperar o investimento</span><b id="r-be"></b><span>Lucro se vender tudo</span><b id="r-total"></b></div>
+ <div class="note warn">Exemplo de conta, não promessa de resultado. O que você vende depende do produto, do preço e da sua divulgação.</div>
+</section>
+
+<section id="t-chk">
+ <h2>Antes de pagar</h2>
+ <div class="small" id="chk-n"></div><div class="prog"><i id="chk-p"></i></div>
+ <ul class="chk" id="chk"></ul>
+ <div class="note warn"><b>Desconfie se:</b> o preço está muito abaixo do mercado, pedem pagamento antecipado para conta de pessoa física desconhecida, não informam CNPJ ou canal oficial, têm pressa exagerada, se recusam a mandar foto real ou há reclamações de não entrega.</div>
+</section>
+
+<section id="t-plano">
+ <h2>Plano semana a semana</h2>
+ <p class="small" style="margin-top:-4px">Comprar cedo, testar pequeno e repor o que girar. Toque na semana para marcar como feita.</p>
+ <div id="plano"></div>
+ <div class="note">Pedido que chega depois de 15 de dezembro corre o risco de virar estoque parado. Combine o prazo <b>por escrito</b> antes de pagar.</div>
+</section>
+
+<section id="t-metodo">
+ <h2>Método dos 15 minutos</h2>
+ <p>A melhor pergunta antes de comprar não é "o que está barato?", e sim <b>"o que as pessoas já estão comprando?"</b>.</p>
+ <div class="step"><div class="n">1</div><div>Abra a Shopee e o Mercado Livre e busque uma categoria: <i>bola de natal</i>, <i>pisca pisca</i>, <i>guirlanda</i>, <i>caminho de mesa natal</i>.</div></div>
+ <div class="step"><div class="n">2</div><div>Ordene por <b>mais vendidos</b>. Anote os 5 primeiros de cada categoria: nome, faixa de preço e quantidade vendida.</div></div>
+ <div class="step"><div class="n">3</div><div>Leia as <b>avaliações de 3 estrelas ou menos</b>: mostram os problemas mais comuns (quebra, cor, cheiro, frete).</div></div>
+ <div class="step"><div class="n">4</div><div>Procure o <b>mesmo tipo de item</b> nos fornecedores e compare o custo com a faixa de preço de venda que você viu.</div></div>
+ <div class="step"><div class="n">5</div><div>Escolha de <b>5 a 10 itens</b> para o primeiro lote: poucos modelos em boa quantidade.</div></div>
+ <div class="note"><b>Regra do lote pequeno:</b> no primeiro pedido, compre uma quantidade que você aceitaria perder se não vendesse. Se girar bem, repita.</div>
+ <h3>Mensagem pronta para o fornecedor</h3>
+ <div class="card"><span id="msg"></span><div class="btns"><button class="b site" id="copiar">Copiar mensagem</button></div></div>
+ <footer>Dúvidas ou algum dado diferente do que está aqui? Escreva para <a href="mailto:matheushenriquecalifla@gmail.com">matheushenriquecalifla@gmail.com</a>.</footer>
+</section>
+</main>
+
+<nav aria-label="Seções">
+ <button data-t="t-forn" class="on"><svg viewBox="0 0 24 24"><path d="M3 9l2-5h14l2 5M4 9v11h16V9M9 20v-6h6v6"/></svg>Fornecedores</button>
+ <button data-t="t-calc"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h2M12 12h2M16 12h0M8 16h2M12 16h2M16 16h0"/></svg>Preço</button>
+ <button data-t="t-chk"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Checklist</button>
+ <button data-t="t-plano"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Plano</button>
+ <button data-t="t-metodo"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Método</button>
+</nav>
+
+<script>
+const F=[{"nome":"Dinatale","categoria":"Natal e decoração natalina","cidade":"—","site":"dinatale.com.br","contato":"WhatsApp (49) 99933-1148 · contato@dinatale.com.br","vende":"Consulte","minimo":"Consulte","natal":"Árvores de Natal, iluminação de Natal e enfeites de Natal","obs":"Site dedicado ao Natal (\"É Natal? É Dinatale!\").","tels":[{"txt":"(49) 99933-1148","num":"5549999331148"}],"mail":"contato@dinatale.com.br","cnpj":false,"minNum":null},{"nome":"Natal Global","categoria":"Natal e decoração natalina","cidade":"—","site":"natalglobal.com.br","contato":"WhatsApp (11) 3311-9136 · caetano@globalbr.net","vende":"Atacado (equipe comercial)","minimo":"10 caixas fechadas no total; dá para combinar produtos diferentes","natal":"Iluminação e decoração de Natal no atacado; no mercado desde 1997","obs":"Atendimento de segunda a sexta, das 8h às 18h. Há opção de solicitar catálogo no site.","tels":[{"txt":"(11) 3311-9136","num":"551133119136"}],"mail":"caetano@globalbr.net","cnpj":false,"minNum":null},{"nome":"Só Natal","categoria":"Natal e decoração natalina","cidade":"—","site":"sonatal.com.br","contato":"WhatsApp (11) 2345-8444 · contato@sonatal.com.br","vende":"Consulte","minimo":"Consulte (tabela de preços 2026 no site)","natal":"Indústria de enfeites natalinos, desde 1976","obs":"Por ser indústria, vale pedir a tabela de preços e o prazo de produção e entrega.","tels":[{"txt":"(11) 2345-8444","num":"551123458444"}],"mail":"contato@sonatal.com.br","cnpj":false,"minNum":null},{"nome":"Atacado Beija Flor","categoria":"Natal e decoração natalina","cidade":"—","site":"atacadobeijaflor.com.br","contato":"WhatsApp (41) 99131-0301 · (41) 3243-0682 · atendimento@atacadobeijaflor.com.br","vende":"Consulte","minimo":"Consulte","natal":"Enfeites de Natal, fitas de Natal, flores e folhagens artificiais","obs":"Linha de artesanato e decoração, boa para quem faz arranjos e kits.","tels":[{"txt":"(41) 99131-0301","num":"5541991310301"},{"txt":"(41) 3243-0682","num":"554132430682"}],"mail":"atendimento@atacadobeijaflor.com.br","cnpj":false,"minNum":null},{"nome":"Atacado Minas de Presentes","categoria":"Natal e decoração natalina","cidade":"São Paulo/SP (Rua 25 de Março, 837)","site":"atacadominasdepresentes.com.br","contato":"WhatsApp (11) 3311-4951 · atacado@minasdepresentes.com.br","vende":"Exclusivo atacado (revenda)","minimo":"R$ 1.500 (informado no site)","natal":"Seção de artigos de Natal, decoração e presentes","obs":"Troca e devolução: 5 dias a partir do recebimento para avisar avarias (informado no site).","tels":[{"txt":"(11) 3311-4951","num":"551133114951"}],"mail":"atacado@minasdepresentes.com.br","cnpj":false,"minNum":1500},{"nome":"Semaan Pari","categoria":"Atacados com seção de Natal","cidade":"São Paulo/SP (Pari)","site":"semaanpari.com.br","contato":"WhatsApp (11) 99120-8890 · vendas@semaan.com.br","vende":"Consulte","minimo":"\"Compra mínima: consulte condições comerciais\" (site)","natal":"Enfeites de Natal; brinquedos, utilidades e sazonais","obs":"Grande atacado do Pari com seção própria de artigos de época.","tels":[{"txt":"(11) 99120-8890","num":"5511991208890"}],"mail":"vendas@semaan.com.br","cnpj":false,"minNum":null},{"nome":"Atacado Nipo Center","categoria":"Atacados com seção de Natal","cidade":"—","site":"atacadonipocenter.com.br","contato":"WhatsApp (11) 94462-3108","vende":"Somente CNPJ (pessoa jurídica), segundo o site","minimo":"Consulte","natal":"Seção sazonal de Natal: decoração e peças natalinas","obs":"O site informa vendas somente no atacado para lojistas e revendedores (CNPJ); cartão só no site.","tels":[{"txt":"(11) 94462-3108","num":"5511944623108"}],"mail":"","cnpj":true,"minNum":null},{"nome":"Atacado Vencedor","categoria":"Atacados com seção de Natal","cidade":"Braço do Norte/SC","site":"atacadovencedor.com","contato":"WhatsApp (48) 99151-9450 · sac@atacadovencedor.com","vende":"Consulte (há perguntas frequentes no site)","minimo":"Consulte no FAQ do site","natal":"Menu de Natal; mesa posta, decoração e utilidades","obs":"Divulga árvores, bolas, fitas e itens de Natal. Parcelamento em até 10x sem juros (site).","tels":[{"txt":"(48) 99151-9450","num":"5548991519450"}],"mail":"sac@atacadovencedor.com","cnpj":false,"minNum":null},{"nome":"Zein Import","categoria":"Atacados com seção de Natal","cidade":"São Paulo/SP","site":"b2b.zeinimport.com.br","contato":"WhatsApp (11) 3324-6410 · (11) 94796-5952 · b2b@zeinimport.com.br","vende":"Atacado B2B (consulte CPF/CNPJ)","minimo":"Consulte","natal":"Enfeites de Natal; utilidades, brinquedos e variedades","obs":"Site B2B com categoria Natal e promoções.","tels":[{"txt":"(11) 3324-6410","num":"551133246410"},{"txt":"(11) 94796-5952","num":"5511947965952"}],"mail":"b2b@zeinimport.com.br","cnpj":false,"minNum":null},{"nome":"Atef Distribuidora","categoria":"Atacados com seção de Natal","cidade":"São Paulo/SP (Pari)","site":"b2b.atefdistribuidora.com.br","contato":"WhatsApp (11) 3324-6411 · b2b@atefdistribuidora.com.br","vende":"Atacado B2B (consulte CPF/CNPJ)","minimo":"Consulte","natal":"Categoria Natal; brinquedos, ferramentas e utilidades","obs":"Loja no Pari. Tem outlet no site.","tels":[{"txt":"(11) 3324-6411","num":"551133246411"}],"mail":"b2b@atefdistribuidora.com.br","cnpj":false,"minNum":null},{"nome":"Issam","categoria":"Atacados com seção de Natal","cidade":"—","site":"b2b.issam.com.br","contato":"WhatsApp (11) 3324-6409 · b2b@issam.com.br","vende":"Atacado B2B (consulte CPF/CNPJ)","minimo":"Consulte","natal":"Categoria Natal; brinquedos e utilidades domésticas","obs":"Site B2B com categoria Natal e outlet.","tels":[{"txt":"(11) 3324-6409","num":"551133246409"}],"mail":"b2b@issam.com.br","cnpj":false,"minNum":null},{"nome":"Importec Atacado","categoria":"Atacados com seção de Natal","cidade":"—","site":"importecatacado.com.br","contato":"WhatsApp (31) 97150-4266 · sac@importecatacado.com.br","vende":"CNPJ com Inscrição Estadual (informado no site)","minimo":"R$ 1.000 (mínimo do site)","natal":"Coleção de enfeites natalinos","obs":"Cadastro prévio no site para ver preços (cadastro@importecatacado.com.br).","tels":[{"txt":"(31) 97150-4266","num":"5531971504266"}],"mail":"sac@importecatacado.com.br","cnpj":true,"minNum":1000},{"nome":"Atacado Ideal","categoria":"Atacados com seção de Natal","cidade":"—","site":"atacadoideal.com.br","contato":"WhatsApp (19) 3589-8042","vende":"Consulte","minimo":"Consulte","natal":"Categoria Natal; papelaria, brinquedos e utilidades","obs":"Tem também embalagens e festas.","tels":[{"txt":"(19) 3589-8042","num":"551935898042"}],"mail":"","cnpj":false,"minNum":null},{"nome":"Atacado Contini","categoria":"Atacados com seção de Natal","cidade":"Lajeado/RS","site":"atacadocontini.com.br","contato":"WhatsApp (51) 98297-2914","vende":"Consulte","minimo":"Consulte","natal":"Árvores de Natal, bolas e pendentes, bonecos, guirlandas, fitas e topes","obs":"Boa opção para quem está na região Sul.","tels":[{"txt":"(51) 98297-2914","num":"5551982972914"}],"mail":"","cnpj":false,"minNum":null},{"nome":"Start Atacado","categoria":"Atacados com seção de Natal","cidade":"Pinhalzinho/SC","site":"startatacado.com.br","contato":"WhatsApp (49) 3366-3791 · startatacado@gmail.com","vende":"Consulte","minimo":"Consulte","natal":"Categoria Natal; utilidades, material escolar e variedades","obs":"Respondeu com mensagem automática no WhatsApp; a equipe responde quando possível.","tels":[{"txt":"(49) 3366-3791","num":"554933663791"}],"mail":"startatacado@gmail.com","cnpj":false,"minNum":null},{"nome":"Pontão das Fábricas","categoria":"Atacados com seção de Natal","cidade":"Braço do Norte/SC","site":"pontaodasfabricas.com.br","contato":"WhatsApp (48) 3658-8348 · atendimento@pontaodasfabricas.com.br","vende":"Consulte (lojas físicas e loja online)","minimo":"Consulte","natal":"Categoria Natal; cama, mesa e banho, decoração e tapetes","obs":"25 anos de empresa e 7 megalojas (site). Parcelamento em até 10x sem juros. Atendimento humano de segunda a quinta, das 8h às 17h30, segundo o próprio WhatsApp.","tels":[{"txt":"(48) 3658-8348","num":"554836588348"}],"mail":"atendimento@pontaodasfabricas.com.br","cnpj":false,"minNum":null},{"nome":"Silver Festas (Silver Plastic)","categoria":"Festas e embalagens","cidade":"Guarulhos/SP","site":"silverplastic.com.br","contato":"WhatsApp (11) 2412-4299 · (11) 98951-7585 · contato@silverplastic.com.br","vende":"Lojistas (consulte CPF)","minimo":"Consulte","natal":"Nova linha de Natal com mais de 800 itens, segundo o site","obs":"Artigos para festa e confeitaria desde 2013, com lojistas em todos os estados.","tels":[{"txt":"(11) 2412-4299","num":"551124124299"},{"txt":"(11) 98951-7585","num":"5511989517585"}],"mail":"contato@silverplastic.com.br","cnpj":false,"minNum":null},{"nome":"Embaleme","categoria":"Festas e embalagens","cidade":"—","site":"embaleme.com.br","contato":"WhatsApp (19) 99854-7800 · (19) 3571-3311 · vendasonline@embaleme.com.br","vende":"Consulte","minimo":"Consulte","natal":"Embalagens e festas, com categoria Natal, Réveillon e Ano Novo","obs":"Útil para embalagens, laços e kits de presente.","tels":[{"txt":"(19) 99854-7800","num":"5519998547800"},{"txt":"(19) 3571-3311","num":"551935713311"}],"mail":"vendasonline@embaleme.com.br","cnpj":false,"minNum":null}];
+const A=[{"nome":"Fábrica de Natal","categoria":"Natal / decoração natalina","cidade":"—","site":"instagram.com/fabricadenataloficial"},{"nome":"Roma Aviamentos","categoria":"Aviamentos / DIY","cidade":"São Paulo/SP","site":"romaaviamentos.com.br"},{"nome":"Melyana","categoria":"Natal / decoração natalina","cidade":"—","site":"melyana.com.br"},{"nome":"Ultramarine","categoria":"Decoração geral","cidade":"—","site":"ultramarinebrasil.com.br"},{"nome":"Niazi Chohfi","categoria":"Decoração geral","cidade":"São Paulo/SP","site":"niazi.com.br"},{"nome":"Distribuidora Importline","categoria":"Natal / decoração natalina","cidade":"—","site":"distribuidoraimportline.com.br"},{"nome":"Atacado Atalaia","categoria":"Iluminação","cidade":"—","site":"sl.atacadoatalaia.com.br"},{"nome":"Im Streck","categoria":"Natal / decoração natalina","cidade":"—","site":"imstreck.com.br"},{"nome":"Ponto das Festas","categoria":"Festas e presentes","cidade":"—","site":"pontodasfestas.com.br"},{"nome":"Loja de 199 Online","categoria":"Natal / decoração natalina","cidade":"São Paulo/SP","site":"lojade199online.com.br"},{"nome":"Atacadão Saara (Saara Lojas Oficial)","categoria":"Decoração geral","cidade":"Rio de Janeiro/RJ","site":"atacadaosaara.com.br"},{"nome":"Vivian Festas","categoria":"Festas e presentes","cidade":"—","site":"vivianfestas.com.br"},{"nome":"Fernet","categoria":"Natal / decoração natalina","cidade":"—","site":"fernet.com.br"},{"nome":"Taschibra","categoria":"Iluminação","cidade":"Indaial/SC","site":"taschibra.com.br"},{"nome":"Intacta Imports","categoria":"Decoração geral","cidade":"Goiânia/GO","site":"intactaimportsatacado.com.br"},{"nome":"Foco Atacado","categoria":"Decoração geral","cidade":"Belo Horizonte/MG","site":"focoatacado.com.br"},{"nome":"Bella Luz","categoria":"Natal / decoração natalina","cidade":"—","site":"bellaluzltda.com.br"},{"nome":"Cipolatti","categoria":"Natal / decoração natalina","cidade":"—","site":"cipolatti.com.br"},{"nome":"Yoomi Presentes","categoria":"Natal / decoração natalina","cidade":"Fortaleza/CE","site":"instagram.com/yoomi_presentes"},{"nome":"Atelier Belas Fitas","categoria":"Aviamentos / DIY","cidade":"—","site":"bellasfittas.com.br"},{"nome":"Atacado Libardi","categoria":"Decoração geral","cidade":"—","site":"atacadolibardi.com.br"},{"nome":"Lojas de decoração do Ceagesp","categoria":"Aviamentos / DIY","cidade":"São Paulo/SP","site":"ceagesp.gov.br"}];
+const MSG="Olá! Tudo bem? Vi a sua loja no Guia Atacado de Natal e queria confirmar: 1) vocês vendem para pessoa física ou só para CNPJ? 2) qual o pedido mínimo? 3) enviam para o meu CEP e qual o prazo médio? 4) quais formas de pagamento? Obrigado!";
+const CHK=["O fornecedor confirmou por escrito se vende para CPF ou só CNPJ.","Combinei o pedido mínimo e o valor final com frete incluído.","Pedi o prazo de entrega para o meu CEP e a data limite compatível com o Natal.","Conferi a forma de pagamento e prefiro meios com proteção ao comprador.","Pedi foto ou vídeo real do produto, não só imagem de catálogo.","Se possível, pedi uma amostra antes do lote grande.","Confirmei a política de troca e defeito.","Pedi nota fiscal ou comprovante da compra.","Conferi o CNPJ do vendedor em fonte pública e se a empresa está ativa.","Guardei prints da conversa e do combinado."];
+const PLANO=[["Semana 1 · início de novembro","Escolher","Aplicar o método dos 15 minutos; escolher 5 a 10 itens; falar com 3 fornecedores; calcular preços."],["Semana 2","Testar","Pedir amostras ou o primeiro lote pequeno; combinar prazos por escrito; preparar fotos e anúncios."],["Semana 3 · meados de novembro","Começar a vender","Publicar no Marketplace, Instagram e WhatsApp; avisar conhecidos; registrar pedidos."],["Semana 4 · fim de novembro","Repor","Ver o que girou; repetir o pedido do que vende; evitar novos itens sem teste."],["Semana 5 · início de dezembro","Pico","Atender rápido; organizar entregas; controlar estoque."],["Semana 6 · até meados de dezembro","Fechar","Parar de comprar novos lotes; vender o que está em mãos; combinar retiradas."],["Depois do Natal","Aprender","Anotar o que vendeu e o que encalhou; guardar fornecedores bons para o ano que vem."]];
+const $=(s)=>document.querySelector(s);
+const mem={};const store={get(k,d){try{const v=localStorage.getItem("guia:"+k);if(v!==null)return JSON.parse(v)}catch(e){}return k in mem?mem[k]:d},set(k,v){mem[k]=v;try{localStorage.setItem("guia:"+k,JSON.stringify(v))}catch(e){}}};
+const esc=(s)=>String(s).replace(/[&<>"]/g,(c)=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const brl=(n)=>isFinite(n)?n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"}):"—";
+
+// abas
+function aba(id){document.querySelectorAll("main section").forEach(s=>s.classList.toggle("on",s.id===id));document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.t===id));window.scrollTo({top:0});store.set("aba",id)}
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>aba(b.dataset.t));
+
+// fornecedores
+const FILT=["Todos","Natal","Atacado com Natal","Festas e embalagens","Aceita CPF?","Mínimo conhecido"];
+let filtro="Todos";
+$("#chips").innerHTML=FILT.map(f=>'<button class="chip'+(f==="Todos"?" on":"")+'" data-f="'+f+'">'+f+'</button>').join("");
+$("#chips").onclick=(e)=>{const b=e.target.closest(".chip");if(!b)return;filtro=b.dataset.f;document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("on",c===b));render()};
+$("#q").oninput=render;
+const wa=(n)=>"https://wa.me/"+n+"?text="+encodeURIComponent(MSG);
+function card(f){
+ const t=f.tels[0];
+ return '<article class="card f"><h4>'+esc(f.nome)+'</h4><div class="tags"><span class="tag">'+esc(f.categoria)+'</span>'+(f.cnpj?'<span class="tag r">Só CNPJ</span>':'')+(f.minNum?'<span class="tag g">Mín. R$ '+f.minNum.toLocaleString("pt-BR")+'</span>':'')+'</div><dl><dt>Vende para</dt><dd>'+esc(f.vende)+'</dd><dt>Pedido mínimo</dt><dd>'+esc(f.minimo)+'</dd><dt>Natal</dt><dd>'+esc(f.natal)+'</dd><dt>Cidade</dt><dd>'+esc(f.cidade)+'</dd></dl>'+(f.obs?'<p class="small" style="margin:8px 0 0">'+esc(f.obs)+'</p>':'')+'<div class="btns">'+(t?'<a class="b wa" target="_blank" rel="noopener" href="'+wa(t.num)+'">WhatsApp '+esc(t.txt)+'</a>':'')+'<a class="b site" target="_blank" rel="noopener" href="https://'+esc(f.site)+'">Abrir site</a>'+(f.mail?'<a class="b mail" href="mailto:'+esc(f.mail)+'">E-mail</a>':'')+'</div><p class="small" style="margin:8px 0 0">Consultado em 01/11/2026</p></article>';
+}
+function render(){
+ const q=$("#q").value.trim().toLowerCase();
+ let L=F.filter(f=>{
+  if(filtro==="Natal"&&f.categoria!=="Natal e decoração natalina")return false;
+  if(filtro==="Atacado com Natal"&&f.categoria!=="Atacados com seção de Natal")return false;
+  if(filtro==="Festas e embalagens"&&f.categoria!=="Festas e embalagens")return false;
+  if(filtro==="Aceita CPF?"&&f.cnpj)return false;
+  if(filtro==="Mínimo conhecido"&&!f.minNum&&!/caixas/.test(f.minimo))return false;
+  return !q||(f.nome+" "+f.natal+" "+f.cidade+" "+f.categoria).toLowerCase().includes(q);
+ });
+ $("#lista").innerHTML=L.length?L.map(card).join(""):'<div class="empty">Nenhum fornecedor com esse filtro.</div>';
+ const AP=A.filter(a=>!q||(a.nome+" "+a.categoria+" "+a.cidade).toLowerCase().includes(q));
+ $("#apoio").innerHTML=AP.map(a=>'<div class="card" style="padding:12px"><b>'+esc(a.nome)+'</b><div class="small">'+esc(a.categoria)+' · '+esc(a.cidade)+'</div><div class="btns"><a class="b site" target="_blank" rel="noopener" href="https://'+esc(a.site)+'">'+esc(a.site)+'</a></div></div>').join("")||'<div class="empty">Nada por aqui.</div>';
+}
+render();
+
+// calculadora
+function calc(){
+ const v=(id)=>parseFloat($(id).value.replace(",","."))||0;
+ const compra=v("#c-compra"),qtd=v("#c-qtd"),frete=v("#c-frete"),emb=v("#c-emb"),taxa=v("#c-taxa")/100,marg=v("#c-marg")/100;
+ const inv=compra+frete+emb,custo=qtd>0?inv/qtd:NaN,den=1-taxa-marg;
+ if(!(den>0)||!(qtd>0)){$("#r-preco").textContent="—";$("#r-aviso").textContent="Taxa + margem precisam somar menos de 100% e a quantidade deve ser maior que zero.";["#r-custo","#r-liq","#r-lucro","#r-be","#r-total"].forEach(s=>$(s).textContent="—");return}
+ const preco=custo/den,liq=preco*(1-taxa),lucro=liq-custo,be=Math.ceil(inv/liq);
+ $("#r-preco").textContent=brl(preco);let p90=Math.floor(preco)+0.9;if(p90<preco)p90+=1;$("#r-aviso").textContent="Sugestão de preço redondo: "+brl(p90);
+ $("#r-custo").textContent=brl(custo);$("#r-liq").textContent=brl(liq);$("#r-lucro").textContent=brl(lucro);
+ $("#r-be").textContent=be+" de "+qtd;$("#r-total").textContent=brl(lucro*qtd);
+}
+["#c-compra","#c-qtd","#c-frete","#c-emb","#c-taxa","#c-marg"].forEach(s=>$(s).oninput=calc);calc();
+
+// checklist e plano (marcações salvas no aparelho)
+function lista(el,itens,chave,txt){
+ const feitos=store.get(chave,{});
+ el.innerHTML=itens.map((it,i)=>'<li data-i="'+i+'" class="'+(feitos[i]?'done':'')+'" role="checkbox" aria-checked="'+!!feitos[i]+'" tabindex="0"><div class="bx">'+(feitos[i]?'✓':'')+'</div><span>'+txt(it)+'</span></li>').join("");
+ el.onclick=el.onkeydown=(e)=>{if(e.type==="keydown"&&e.key!==" "&&e.key!=="Enter")return;const li=e.target.closest("li");if(!li)return;e.preventDefault();feitos[li.dataset.i]=!feitos[li.dataset.i];store.set(chave,feitos);lista(el,itens,chave,txt);if(chave==="chk")prog()};
+}
+function prog(){const f=store.get("chk",{}),n=Object.values(f).filter(Boolean).length;$("#chk-n").textContent=n+" de "+CHK.length+" itens marcados";$("#chk-p").style.width=(n/CHK.length*100)+"%"}
+lista($("#chk"),CHK,"chk",x=>esc(x));prog();
+(function(){const el=$("#plano");const feitos=store.get("plano",{});function r(){el.innerHTML=PLANO.map((p,i)=>'<div class="week card" data-i="'+i+'" style="cursor:pointer;'+(feitos[i]?'opacity:.6':'')+'"><b>'+esc(p[0])+'</b> · '+esc(p[1])+(feitos[i]?' ✓':'')+'<div class="small" style="color:var(--ink);margin-top:4px">'+esc(p[2])+'</div></div>').join("")}r();el.onclick=(e)=>{const c=e.target.closest(".week");if(!c)return;feitos[c.dataset.i]=!feitos[c.dataset.i];store.set("plano",feitos);r()}})();
+
+// mensagem
+$("#msg").textContent=MSG;
+$("#copiar").onclick=async()=>{try{await navigator.clipboard.writeText(MSG);$("#copiar").textContent="Copiado!"}catch(e){$("#copiar").textContent="Selecione e copie o texto acima"}setTimeout(()=>$("#copiar").textContent="Copiar mensagem",2000)};
+
+aba(store.get("aba","t-forn"));
+</script></body></html>
